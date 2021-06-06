@@ -199,7 +199,7 @@ body{
     top: 0;
     right: 0;
     height: 50px;
-    width: 100px;
+    width: 135px;
     color: white;
     margin-right: 10px;
     margin-top: 10px;
@@ -212,9 +212,9 @@ body{
         top: 0;
         right: 0;
         height: 50px;
-        width: 100px;
+        width: 50px;
         color: white;
-        margin-right: 100px;
+        margin-right: 200px;
         margin-top: 10px;
         border-radius: 5px;
         background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
@@ -233,11 +233,23 @@ body{
             font-family: CinzelFont;
             src: url('CinzelFont.ttf');
         }
+        position: absolute;
         bottom: 0;
         left: 0;
+        margin-left: 20px;
+        margin-bottom: 400px;
+        font-size: 20px;
+        width: 10px;
+
     }
     #par{
-
+        @font-face {
+            font-family: CinzelFont;
+            src: url('CinzelFont.ttf');
+        }
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
     body{
         background-color: white;
