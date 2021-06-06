@@ -561,58 +561,37 @@ body{
             cursor: pointer;
         }
         #ma{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            animation: rotate 10s linear infinite;
-        }
-        #roIMG{
-            margin-right: 100px;
-            height: 50%;
-            width: 100%;
-            border-radius: 10%;
-            object-fit: cover;
-        }
+            /* height: 300px;
+             width: 300px; */
+            /* height: 50px;
+             width: 15px; */
+             min-height: 400px;
+             min-width: 30%;
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             margin-bottom: 400px;
+             margin-right: 150px;
+             /*border-radius: 5px;*/
+             width: 30%;
+             height: 400px;
+             animation: rotate 10s linear infinite;
+             /*border: 5px dashed #ffffff;*/
+             
+         }
+         #roIMG{
+             border-radius: 100%;
+             object-fit: cover;
+         }
+         @keyframes rotate {
+             100%{
+                 transform: rotate(0deg);
+             }
+             
         body{
             background-color: white;
         }
        
 }
-/* height = "640"*/
-/*
-#link:hover span{
-    padding-right: 50px;
-}*/
-/*
-#temp{
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: auto;
-    color: white;
-    background-image: linear-gradient(to right,#be1dd3 0%,#c776b9,#663d94 110%);
-}*/
 
-
-/*  id="im" width="400px" height="65px" "image tag in div*/
-
-/*#devContainer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    @font-face {
-        font-family: Lobster;
-        src: url('Lobster.ttf');
-    }
-    font-size: 50px;
 }
-#devlabel{
-    color: white;
-    margin-left: 160px;
-    margin-top: 20px;
-    @font-face {
-        font-family: Lobster;
-        src: url('Lobster.ttf');
-    }
-    font-size: 50px;
-}*/
