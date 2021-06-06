@@ -35,7 +35,7 @@ body{
 #sec{
     color: black;
     position: absolute;
-    float: right;
+    right: 0;
     padding-right: 200px;
     height: 50px;
     
@@ -70,7 +70,6 @@ body{
         src: url('CinzelFont.ttf');
     }
     margin-top: 30px;
-    
     bottom: 0;
     left: 0;
     height: 35%;
@@ -303,21 +302,152 @@ body{
     #link span{
         cursor: pointer;
     }
-
     #ma{
         position: absolute;
         bottom: 0;
         right: 0;
+        animation: rotate 10s linear infinite;
     }
     #roIMG{
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        margin-right: 100px;
+        height: 50%;
+        width: 100%;
+        border-radius: 10%;
+        object-fit: cover;
     }
     body{
         background-color: white;
     }
    
+}
+/* pixel 2 width="411" heigh="731"*/
+@media screen and (min-height:812px){
+    #one{  
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        width: 135px;
+        color: white;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
+        
+        }
+        #two{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 40px;
+            width: 50px;
+            color: white;
+            margin-right: 150px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
+        
+        }
+        #logo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: -80px;
+            margin-top: 10px;
+            width: 50;
+            height: 10;
+            
+        }
+        #text{
+            @font-face {
+                font-family: CinzelFont;
+                src: url('CinzelFont.ttf');
+            }
+        min-height: 30%;
+        min-width: 50%;
+        background-color: black;
+        height: 30%;
+        width: 75%;
+        background-color: black;
+        bottom: 0;
+        left: 0;
+        margin-left: 20px;
+        margin-bottom: 400px;
+        font-size: 30px;
+        }
+        #para{
+            color: white;
+            @font-face {
+                font-family: CinzelFont;
+                src: url('CinzelFont.ttf');
+            }
+            
+        }
+        /*--------para2Txt2*/
+    
+        #text2{
+            @font-face {
+                font-family: NotoSerif;
+                src: url('NotoSerif.ttf');
+            }
+           
+            min-height: 30%;
+            min-width: 50%;
+            background-color: black;
+            height: 30%;
+            width: 75%;
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            margin-left: 20px;
+            margin-bottom: 150px;
+            
+        }
+        #para2{
+            @font-face {
+                font-family: NotoSerif;
+                src: url('NotoSerif.ttf');
+            }
+            color: white;
+        }
+        #link{
+            margin-left: 20px;
+            margin-bottom: 95px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            pointer-events: all;
+            /*z-index: 9999999;*/
+            height: 40px;
+            width: 50px;
+            border-radius: 5px;
+            color: white;
+            background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
+        }
+        #link:hover{
+            transition:all 1.1s ease;
+            opacity: 0.5;
+        }
+        #link span{
+            cursor: pointer;
+        }
+        #ma{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation: rotate 10s linear infinite;
+        }
+        #roIMG{
+            margin-right: 100px;
+            height: 50%;
+            width: 100%;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+        body{
+            background-color: white;
+        }
+       
 }
 /*
 #link:hover span{
