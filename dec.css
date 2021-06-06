@@ -219,6 +219,40 @@ body{
         background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
     
     }
+    #logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -70px;
+        margin-top: 10px;
+        height: 50;
+        width: 50;
+    }
+    #text{
+        min-height: 35%;
+        min-width: 550px;
+        margin-bottom: 320px;
+        margin-left: 80px;
+        @font-face {
+            font-family: CinzelFont;
+            src: url('CinzelFont.ttf');
+        }
+        margin-top: 30px;
+        
+        bottom: 0;
+        left: 0;
+        height: 35%;
+        width: 550px;
+        font-size: 40px;
+        background-color: black;/*Remove this color not needed*/
+    }
+    #par{
+        color: #ffffff !important;
+        background-color: #ffffff !important;/*remove the par-color and bgcolor and also the text container bgcolor black*/
+    }
+    body{
+        background-color: white;
+    }
    
 }
 /*
