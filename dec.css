@@ -191,7 +191,9 @@ body{
     transition: all 1s ease;
     opacity: 0.5;
 }
-@media screen and (min-width:300px){
+
+/*  ______________________________________________________________________________________________________________*/
+@media screen and (min-height:812px){
     #one{  
     position: absolute;
     top: 0;
@@ -206,15 +208,14 @@ body{
     
     }
     #two{
-        border-color: white;
         position: absolute;
         top: 0;
         right: 0;
-        margin-top: 10px;
-        margin-right: 150px;
         height: 50px;
-        width: 80px;
+        width: 100px;
         color: white;
+        margin-right: 100px;
+        margin-top: 10px;
         border-radius: 5px;
         background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
     
@@ -225,30 +226,18 @@ body{
         left: 0;
         margin-left: -70px;
         margin-top: 10px;
-        height: 50;
-        width: 50;
+        
     }
     #text{
-        min-height: 35%;
-        min-width: 550px;
-        margin-bottom: 320px;
-        margin-left: 80px;
         @font-face {
             font-family: CinzelFont;
             src: url('CinzelFont.ttf');
         }
-        margin-top: 30px;
-        
         bottom: 0;
         left: 0;
-        height: 35%;
-        width: 550px;
-        font-size: 40px;
-        background-color: black;/*Remove this color not needed*/
     }
     #par{
-        color: #ffffff !important;
-        background-color: #ffffff !important;/*remove the par-color and bgcolor and also the text container bgcolor black*/
+
     }
     body{
         background-color: white;
