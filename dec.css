@@ -321,7 +321,7 @@ body{
    
 }
 /* pixel 2 width="411" heigh="731"*/
-@media screen and (min-height:812px){
+@media screen and (min-height:731px){
     #one{  
         position: absolute;
         top: 0;
