@@ -128,7 +128,7 @@ body{
     
 }
 
-@media screen and (min-device-width: 481px) and (min-device-height: 768px) {
+@media screen and (max-device-width: 481px) and (max-device-height: 768px) {
     body{
         background-color: rebeccapurple;
     }
@@ -266,7 +266,7 @@ body{
 
 }
 
-@media screen and (min-device-width: 769px) and (min-device-height: 1024px) {
+@media screen and (min-device-width: 482px) and (min-device-height: 769px) and (max-device-width:769px) and (max-device-height:1024px) {
     body{
         background-color: royalblue;
     }
