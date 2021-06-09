@@ -376,20 +376,20 @@ body{
             position: absolute;
             bottom: 0;
             right: 0;
-            margin-bottom: 40px;
-            margin-right: 10px;
-            
-            width: 200px;
-            
+            margin-bottom: 230px;
+            margin-right: 20px;
+            width: 300px;
             animation: rotate 10s linear infinite;  
          }
          #roIMG{
-             position: relative;
-             margin-top: 50%;
-             height: 200px;
-             width: 200px;
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             margin-bottom: 50px;
+             height: 300px;
+             width: 300px;
              object-fit: cover;
-             border-radius: 100%;
+             
          }
          
 
@@ -511,18 +511,20 @@ body{
             position: absolute;
             bottom: 0;
             right: 0;
-            margin-bottom: 40px;
-            margin-right: 10px;
+            margin-bottom: 350px;
+            margin-right: 80px;
             
-            width: 200px;
+            width: 300px;
             
             animation: rotate 10s linear infinite;  
          }
          #roIMG{
-             position: relative;
-             margin-top: 50%;
-             height: 200px;
-             width: 200px;
+             position: absolute;
+             bottom: 0;
+             right: 0;
+             margin-bottom: 50px;
+             height: 300px;
+             width: 300px;
              object-fit: cover;
              border-radius: 100%;
          }
