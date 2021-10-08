@@ -1,259 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Alatsi;
+    src: url(Alatsi-Regular.ttf);
+}
 body{
-    background-color:white;
+    display: block;
+    min-height: 100vh;
+    place-items: center;
 }
-#logo{
+.navbar{
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: background-color 300ms ease;
+}
+#home,#content,#features,#updates,#about{
+    font-size: 2.125rem;
+    color: #000;
+}
+#navbar-logo{
+    color: #000;
+    font-size: 2rem;
+}
+/* .bg-image{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('minmoun.jpg');
+    background-size: cover;
+    height: 70vh;
+    text-align: center;
+    padding: 0;
+} */
+.row{
+    place-items: center;
+}
+.positioning{
+    padding: 2.25rem 0 0;
     position: absolute;
-    left: 0px;
-    padding-left: 100px;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-#text{
-    margin-bottom: 320px;
-    margin-left: 80px;
-    @font-face {
-        font-family: CinzelFont;
-        src: url('CinzelFont.ttf');
-    }
-    margin-top: 30px;
-    bottom: 0;
-    left: 0;
-    height: 35%;
-    width: 550px;
-    font-size: 40px;
-    background-color: black;
+.hero-text{
+    color: #000;
+    /* font-family: 'AvenirNext-Heavy','AvenirNext-regular','Lato', sans-serif !important; */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Staatliches'; */
+    font-family: 'Alatsi';
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
 }
-#par{
-    color: #ffffff;
-    background-color: #ffffff;
+.hero-sub-text{
+        color: silver;
+        font-size: 2rem;
 }
-#text2{
-    background-color: black;
-    height: 30%;
-    width: 50%;
-    bottom: 0;
-    left: 0;
-    margin-left: 80px;
-    margin-bottom: 100px;
-
-    @font-face {
-        font-family: NotoSerif;
-        src: url('NotoSerif.ttf');
-    }
-
+.first-button{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #fff;
+    margin: 4px;
+    text-decoration: none;
 }
-#para2{
-    color: white;
-    font-size: 20px;
+.first-button:hover{
+    background-color: #fff;
+    color: rgba(41, 41, 41, 1);
+    transform: scale(1.125);
+    transition: transform 100ms ease;
+    text-decoration: none;
 }
-
-#one{
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 50px;
-    width: 200px;
-    color: white;
-    margin-right: 70px;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
-
+.sec-button{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px;
+    text-transform: uppercase;
+    background-color: #db5c4f;
+    color: #fff;
+    border: 1px solid #db5c4f;
+    margin: 4px;
+    margin-top: 5px;
+    text-decoration: none;
 }
-#one:hover{
-    transition: all 1.1s ease;
-    opacity: 0.5;
+.sec-button:hover{
+    transform: scale(1.125);
+    transition: transform 100ms ease;
+    text-decoration: none;
+    color: #fff;
 }
-
-#two{
-    border-color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 300px;
-    height: 50px;
-    width: 80px;
-    color: white;
-    border-radius: 5px;
-    background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
-
+.page-footer{
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
 }
-#two:hover{
-    transition: all 1s ease;
-    opacity: 0.5;
+.about{
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
-#link{
-    margin-left: 80px;
-    margin-bottom: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    pointer-events: all;
-    height: 50px;
-    width: 200px;
-    border-radius: 5px;
-    color: white;
-    background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
+.footer-p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#link:hover{
-    transition:all 1.1s ease;
-    opacity: 0.5;
+.links{
+    text-align: center;
 }
-#link span{
-    cursor: pointer;
+.fa{
+    padding: 10px;
+    font-size: 22px;
+    width: 43px;
+    text-align: center;
+    text-decoration: none;
+    /* margin: 5px 2px; */
+    /* border-radius: 100%; */
 }
-#ma{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    width: 30%;
-    height: 400px;
-    animation: rotate 10s linear infinite;    
+.fa-facebook,.fa-twitter,.fa-google,.fa-instagram,.fa-github{
+    text-decoration: none;
+    background: transparent;
+    color: #fff;
 }
-#roIMG{
-    border-radius: 100%;
-    object-fit: cover;
+.fa-facebook:hover{
+    text-decoration: none;
 }
-@keyframes rotate {
-    100%{
-        transform: rotate(0deg);
-    }
-    
+.fa-twitter:hover{
+    text-decoration: none;
 }
-
-@media screen and (max-device-width: 480px) and (max-device-height: 768px) {
-    body{
-        background-color: black ;
-    }
-    
-   
-        #logo{
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-left: 10px;
-            margin-top: 10px;
-            
-        }
-        #logoid{
-            height: 25px;
-            width: 25px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-left: 10px;
-        }
-        #text{
-            @font-face {
-                font-family: CinzelFont;
-                src: url('CinzelFont.ttf');
-            }
-            background-color: black;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 70%;
-            width: 30%;
-            margin-left: 20px;
-            margin-bottom: 100px;
-            font-size: 20px;
-            word-break: break-all;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        
-        }
-        #para{
-            color: white;
-            @font-face {
-                font-family: CinzelFont;
-                src: url('CinzelFont.ttf');
-            }
-            
-        }
-        #text2{
-            @font-face {
-                font-family: NotoSerif;
-                src: url('NotoSerif.ttf');
-            }
-            background-color: black;
-            height: 30%;
-            width: 70%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin-left: 20px;
-            margin-bottom: 60px;
-            
-        }
-        #para2{
-            font-size: 12px;
-            @font-face {
-                font-family: NotoSerif;
-                src: url('NotoSerif.ttf');
-            }
-            color: white;
-        }
-        #one{  
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 40px;
-            width: 150px;
-            color: white;
-            margin-right: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
-            
-            }
-            #two{
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 40px;
-                width: 50px;
-                color: white;
-                margin-right: 180px;
-                margin-top: 10px;
-                border-radius: 5px;
-                background-image: linear-gradient(to right,#040304 0%,#000000,#000000 110%);
-            
-            }
-        #link{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 40px;
-            width: 180px;
-            color: white;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            background-image: linear-gradient(to bottom right,#f665de 0%,#c776b9,#7649aa 110%);
-        }
-        #link:hover{
-            transition:all 1.1s ease;
-            opacity: 0.5;
-        }
-        #ma{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin-bottom: 200px;
-            margin-right: 10px;
-            width: 200px;
-            
-            animation: rotate 10s linear infinite;  
-         }
-         #roIMG{
-             position: relative;
-             margin-top: 50%;
-             height: 200px;
-             width: 200px;
-             object-fit: cover;
-             border-radius: 100%;
-         }
-    
-  
+.fa-google:hover{
+    text-decoration: none;
+}
+.fa-instagram:hover{
+    text-decoration: none;
+}
+.fa-github:hover{
+    text-decoration: none;
 }
