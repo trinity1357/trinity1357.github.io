@@ -14,17 +14,26 @@ body{
 }
 .navbar{
     text-transform: uppercase;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: #202121;
     transition: background-color 300ms ease;
 }
 #home,#content,#features,#updates,#about{
     font-size: 2.125rem;
-    color: #000;
+    color: #fff;
 }
 #navbar-logo{
-    color: #000;
+    color: #fff;
     font-size: 2rem;
 }
+/* form */
+.form-group{
+    /* display: block; */
+    /* text-align: center; */
+    /* margin-top: 10%; */
+    padding-top: 5.25rem;
+}
+/* form */
 /* .bg-image{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('minmoun.jpg');
     background-size: cover;
@@ -44,7 +53,7 @@ body{
     transform: translate(-50%,-50%);
 }
 .hero-text{
-    color: #000;
+    color: #fff;
     /* font-family: 'AvenirNext-Heavy','AvenirNext-regular','Lato', sans-serif !important; */
     /* font-family: 'Open Sans', sans-serif; */
     /* font-family: 'Staatliches'; */
@@ -65,7 +74,7 @@ body{
     padding: 8px;
     text-transform: uppercase;
     background-color: transparent;
-    color: #000;
+    color: #fff;
     border: 1px solid #fff;
     margin: 4px;
     text-decoration: none;
