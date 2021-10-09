@@ -25,3 +25,7 @@
     transition: transform 100ms ease;
     text-decoration: none;
 }
+.calculate:active, .calculate:visited, .calculate:focus {
+    color: #fff;
+    text-decoration: none;
+}
