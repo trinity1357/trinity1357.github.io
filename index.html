@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957797554061331"
      crossorigin="anonymous"></script> 
@@ -20,20 +23,28 @@
 <div class="container">
   <form>
     <div class="form-group">
-      <label for="pvinput">Enter pv</label>
+      <label for="pvinput">Present Value</label>
       <input type="text" class="form-control" id="pvinput" aria-describedby="emailHelp" placeholder="Enter Present Value">
     </div>
     <div class="form-group">
-      <label for="Enter i">Enter i</label>
+      <label for="Enter i">Interest</label>
       <input type="text" class="form-control" id="Enter i" placeholder="Enter Interest">
     </div>
     <div class="form-group">
-      <label for="Enter n">Enter n</label>
-      <input type="text" class="form-control" id="Enter n" placeholder="Enter Number of Periods (n)">
+      <label for="Enter n">Time</label>
+      <input type="text" class="form-control" id="Enter n" placeholder="Enter Number of Periods (n) in years">
     </div>
     <!-- <button  class="btn btn-primary">Calculate</button> -->
     <a href="#" class="calculate">Calculate</a>
   </form>
 </div>
+<div class="container" id="futureval">
+  <h3>Future Value : 100</h3>
+</div>
+<div class="container" id="chart">
+  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+  <canvas id="myChart"></canvas>
+</div>
+<script src="app.js"></script>
  </body>
 </html> 
