@@ -1,22 +1,39 @@
-// $(function (){
-//     $(document).scroll(function () {
-//         var $nav = $(".navbar");
-//         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-//     });
-// });
-// $(document).ready(function() {
-//     var scroll_pos = 0;
-//     $(document).scroll(function(){
-//         scroll_pos = $(this).scrollTop();
-
-//         if(scroll_pos > 210){
-//             $('#navbar-logo,#home,#content,#features,#updates,#about').css('color','#000');
-//             $('.navbar').css('background-color','#fff');
-//         }
-//         else
-//         {
-//             $('#navbar-logo,#home,#content,#features,#updates,#about').css('color','#fff');
-//             $('.navbar').css('background-color','transparent');
-//         }
-//     });
-// });
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '#label1',
+            data: [12, 19, 3],
+            backgroundColor: [
+                // 'rgba(255, 99, 132, 0.2)',
+                // 'rgba(59, 226, 255)',
+                'rgba(48, 252, 246)',
+                'rgba(252, 125, 116)',
+                // 'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            // borderColor: [
+            //     'rgba(255, 99, 132, 1)',
+            //     'rgba(54, 162, 235, 1)',
+            //     'rgba(255, 206, 86, 1)',
+            //     'rgba(75, 192, 192, 1)',
+            //     'rgba(153, 102, 255, 1)',
+            //     'rgba(255, 159, 64, 1)'
+            // ],
+            // borderWidth: 1,
+            hoverOffset: 1.5,
+        }],
+    },
+    // options: {
+    //     scales: {
+    //         y: {
+    //             beginAtZero: true
+    //         }
+    //     }
+    // }
+});
