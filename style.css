@@ -1,150 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.navbar-brand{
+    color: #000;
 }
-@font-face {
-    font-family: Alatsi;
-    src: url(Alatsi-Regular.ttf);
-}
-body{
-    display: block;
-    min-height: 100vh;
-    place-items: center;
-}
-.navbar{
-    text-transform: uppercase;
-    /* background-color: transparent; */
-    background-color: #202121;
-    transition: background-color 300ms ease;
-}
-#home,#content,#features,#updates,#about{
-    font-size: 2.125rem;
-    color: #fff;
-}
-#navbar-logo{
-    color: #fff;
-    font-size: 2rem;
-}
-/* form */
-.form-group{
-    /* display: block; */
-    /* text-align: center; */
-    /* margin-top: 10%; */
-    padding-top: 5.25rem;
-}
-/* form */
-/* .bg-image{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('minmoun.jpg');
-    background-size: cover;
-    height: 70vh;
-    text-align: center;
-    padding: 0;
-} */
-.row{
-    place-items: center;
-}
-.positioning{
-    padding: 2.25rem 0 0;
-    position: absolute;
-    text-align: center;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-.hero-text{
-    color: #fff;
-    /* font-family: 'AvenirNext-Heavy','AvenirNext-regular','Lato', sans-serif !important; */
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Staatliches'; */
-    font-family: 'Alatsi';
-    font-size: 5rem;
-    font-weight: 600;
-    letter-spacing: .3rem;
-    text-transform: uppercase;
-}
-.hero-sub-text{
-        color: silver;
-        font-size: 2rem;
-}
-.first-button{
+.calculate{
     display: inline-block;
     font-size: 12px;
     font-weight: 400;
     padding: 8px;
     text-transform: uppercase;
-    background-color: transparent;
+    background-color: #000;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     margin: 4px;
     text-decoration: none;
 }
-.first-button:hover{
-    background-color: #fff;
-    color: rgba(41, 41, 41, 1);
+.calculate:hover{
+    background-color: #000;
+    /* color: rgba(41, 41, 41, 1); */
+    color: #fff;
     transform: scale(1.125);
     transition: transform 100ms ease;
-    text-decoration: none;
-}
-.sec-button{
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 8px;
-    text-transform: uppercase;
-    background-color: #db5c4f;
-    color: #fff;
-    border: 1px solid #db5c4f;
-    margin: 4px;
-    margin-top: 5px;
-    text-decoration: none;
-}
-.sec-button:hover{
-    transform: scale(1.125);
-    transition: transform 100ms ease;
-    text-decoration: none;
-    color: #fff;
-}
-.page-footer{
-    background-color: rgba(0,0,0,0.9);
-    color: #fff;
-}
-.about{
-    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-}
-.footer-p{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.links{
-    text-align: center;
-}
-.fa{
-    padding: 10px;
-    font-size: 22px;
-    width: 43px;
-    text-align: center;
-    text-decoration: none;
-    /* margin: 5px 2px; */
-    /* border-radius: 100%; */
-}
-.fa-facebook,.fa-twitter,.fa-google,.fa-instagram,.fa-github{
-    text-decoration: none;
-    background: transparent;
-    color: #fff;
-}
-.fa-facebook:hover{
-    text-decoration: none;
-}
-.fa-twitter:hover{
-    text-decoration: none;
-}
-.fa-google:hover{
-    text-decoration: none;
-}
-.fa-instagram:hover{
-    text-decoration: none;
-}
-.fa-github:hover{
     text-decoration: none;
 }
