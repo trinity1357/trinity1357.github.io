@@ -16,35 +16,41 @@
      crossorigin="anonymous"></script> 
  </head>
  <body>
+   <div class="container">
    <!-- As a link -->
+   <!-- header -->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Future Value Calculator</a>
 </nav>
-<div class="container">
+<!-- header -->
+<!-- calc -->
+<div class="col-md-6">
   <form>
-    <div class="form-group">
+    <div class="form-group"> 
       <label for="pvinput">Present Value</label>
-      <input type="text" class="form-control" id="pvinput" aria-describedby="emailHelp" placeholder="Enter Present Value">
+      <input type="number" class="form-control" id="presentvalue" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value" >
     </div>
     <div class="form-group">
       <label for="Enter i">Interest</label>
-      <input type="text" class="form-control" id="Enter i" placeholder="Enter Interest">
+      <input type="number" class="form-control" id="interest" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate">
     </div>
     <div class="form-group">
-      <label for="Enter n">Time</label>
-      <input type="text" class="form-control" id="Enter n" placeholder="Enter Number of Periods (n) in years">
+      <label for="Enter n">Number of Periods<span>(n)</span></label>
+      <input type="number" class="form-control" id="time" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years">
     </div>
-    <!-- <button  class="btn btn-primary">Calculate</button> -->
-    <a href="#" class="calculate">Calculate</a>
+    <a class="calculate" onclick="future_value()">Calculate</a>
   </form>
+
+  <h3>Future Value : <span id="futureValue"></span></h3>
+  <h3>Round (fv): <span id="round"></span></h3>
+  <h3>present value (pv) : <span id="pv"></span><br>interest (i) : <span id="int"></span><br>Number of periods (n) : <span id="periods"></span></h3>
+
 </div>
-<div class="container" id="futureval">
-  <h3>Future Value : 100</h3>
-</div>
-<div class="container" id="chart">
-  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+<!-- calc -->
+<div class="col" id="chart">
   <canvas id="myChart"></canvas>
 </div>
+   </div>
 <script src="app.js"></script>
  </body>
 </html> 
