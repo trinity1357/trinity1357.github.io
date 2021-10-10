@@ -28,7 +28,7 @@
 <!-- header -->
 <!-- calc -->
 <div class="col-md-6">
-  <form>
+  <form id="form">
     <div class="form-group"> 
       <label for="pvinput">Present Value</label>
       <input type="number" class="form-control" id="presentvalue" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value" >
@@ -41,7 +41,10 @@
       <label for="Enter n">Number of Periods<span>(n)</span></label>
       <input type="number" class="form-control" id="time" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years">
     </div>
-    <a class="calculate" onclick="future_value()">Calculate</a>
+    <div id="calcres">
+      <a class="calculate" onclick="future_value()">Calculate</a>
+      <a class="calculate" onclick="future_reset()">Reset</a>
+    </div>
   </form>
 
   <h3>Future Value : <span id="futureValue"></span></h3>
