@@ -6,30 +6,27 @@ function future_value() {
     futureval = presentvaluechart.value * Math.pow(1 + interestchart.value / 100, timechart.value);
     
     document.getElementById('futureValue').innerHTML = futureval;
-    document.getElementById('round').innerHTML = Math.round(futureval);
+    document.getElementById('ceil').innerHTML = Math.ceil(futureval);
+    document.getElementById('floor').innerHTML = Math.floor(futureval);
     document.getElementById('pv').innerHTML = presentvaluechart.value;
     document.getElementById('int').innerHTML = interestchart.value;
     document.getElementById('periods').innerHTML = timechart.value;
     
     if (presentvaluechart.value === '') {
         document.getElementById('pv').innerHTML = 'Enter Present Value';
-        console.log('website link but present value is null');
     }
     if (interestchart.value === '') {
-        console.log('website link but interest is null');
         document.getElementById('int').innerHTML = 'Enter Interest';
         document.getElementById('futureValue').innerHTML = '0';
 
     }
     if (timechart.value === '') {
-        console.log('website link but  time is null');
         document.getElementById('periods').innerHTML = 'Enter number of periods (n)';
         document.getElementById('futureValue').innerHTML = '0';
 
     }
     if (Number.isNaN(futureval)) { 
         document.getElementById('futureValue').innerHTML = '0';
-        console.log('website link NaN');
     }
     
 }
