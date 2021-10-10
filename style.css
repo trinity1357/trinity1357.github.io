@@ -41,7 +41,7 @@ body{
     text-decoration: none;
 }
 .calculate:hover{
-    
+    cursor: pointer;
     color: #fff;
     transform: scale(1.125);
     transition: transform 100ms ease;
@@ -68,12 +68,36 @@ input[type=number] {
     width: 30%;
     height: 30%;
 }
-#futureValue, #round{
+#futureValue, #ceil, #floor{
     color: #eb8531;
 }
 #pv, #int, #periods {
     color: #1663de;
 }
+/* table */
+table {
+    font-family: 'Roboto';
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+   th {
+    font-size: 1.525rem;
+    outline: 1px solid #e3e3e3;
+    text-align: left;
+    padding: 8px;
+  }
+  td {
+      font-weight: 500;
+      outline: 1px solid #e3e3e3;
+      text-align: left;
+      padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e3e3e3;
+  }
+/* table */
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .form-group{
