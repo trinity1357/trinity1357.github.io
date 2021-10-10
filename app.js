@@ -31,6 +31,10 @@ function future_value() {
     
 }
 
+function future_reset() {
+    document.getElementById('form').reset();
+}
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'doughnut',
