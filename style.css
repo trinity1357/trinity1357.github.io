@@ -1,5 +1,4 @@
 .navbar-brand{
-    /* font-style: 'Roboto'; */
     font-family: 'Open Sans';
     font-size: 2.525rem;
     letter-spacing: 0.100rem;
@@ -12,6 +11,7 @@
     color: #000;
     text-decoration: none;
 }
+
 .form-group{
     font-family: 'Roboto';
     font-size: medium;
@@ -27,15 +27,14 @@
     letter-spacing: 1.5%;
     padding: 8px;
     text-transform: uppercase;
-    background-color: #000;
+    background-color: #1c1c1b;
     color: #fff;
-    border: 1px solid #000;
+    
     margin: 4px;
     text-decoration: none;
 }
 .calculate:hover{
-    background-color: #000;
-    /* color: rgba(41, 41, 41, 1); */
+    
     color: #fff;
     transform: scale(1.125);
     transition: transform 100ms ease;
@@ -56,12 +55,17 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-/* font style not added yet */
 #chart {
     display: flex;
     aspect-ratio: 100 /20;
     width: 30%;
     height: 30%;
+}
+#futureValue, #round{
+    color: #eb8531;
+}
+#pv, #int, #periods {
+    color: #1663de;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
@@ -71,5 +75,8 @@ input[type=number] {
     #chart{
         width: 100%;
         height: 100%;
+    }
+    .calculate:hover{
+        transform: none;
     }
   }
