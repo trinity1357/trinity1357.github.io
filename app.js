@@ -12,6 +12,11 @@ function future_value() {
     document.getElementById('int').innerHTML = interestchart.value;
     document.getElementById('periods').innerHTML = timechart.value;
     
+    if (document.getElementById('presentvalue').value != '' && document.getElementById('int').innerHTML == '' && document.getElementById('periods').innerHTML == '') {
+        console.log('data is not null');
+        document.getElementById('ceil').innerHTML = '0';
+        document.getElementById('floor').innerHTML = '0';
+    }
     if (presentvaluechart.value === '') {
         document.getElementById('pv').innerHTML = 'Enter Present Value';
     }
@@ -48,6 +53,9 @@ var myChart = new Chart(ctx, {
                 'rgba(48, 252, 246)',
                 'rgba(252, 125, 116)',
                 'rgba(255, 206, 86, 0.2)',
+                // 'rgba(75, 192, 192, 0.2)',
+                // 'rgba(153, 102, 255, 0.2)',
+                // 'rgba(255, 159, 64, 0.2)'
             ],
             hoverOffset: 1.5,
         }],
