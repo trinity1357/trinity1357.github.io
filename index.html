@@ -28,7 +28,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957797554061331"
      crossorigin="anonymous"></script> 
  </head>
- <body>
+  <body>
    <div class="container">
    <!-- As a link -->
    <!-- header -->
@@ -41,15 +41,15 @@
   <form id="form">
     <div class="form-group"> 
       <label for="pvinput">Present Value</label>
-      <input type="number" class="form-control" id="presentvalue" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value" >
+      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value" >
     </div>
     <div class="form-group">
       <label for="Enter i">Interest</label>
-      <input type="number" class="form-control" id="interest" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate">
+      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate">
     </div>
     <div class="form-group">
       <label for="Enter n">Number of Periods<span>(n)</span></label>
-      <input type="number" class="form-control" id="time" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years">
+      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years">
     </div>
     <div id="calcres">
       <a class="calculate" onclick="future_value()">Calculate</a>
@@ -90,7 +90,43 @@
 <div class="col" id="chart">
   <canvas id="myChart"></canvas>
 </div>
+
    </div>
+   <!-- info -->
+   <div class="container" id="info">
+     <!-- layman's terms -->
+    <div class="col-md">
+      <h4>What is Future Value in layman's terms ?</h4>
+      <p>Future Value formula :</p>
+     <h4 class="formula">FV=PV(1+i)<sup>n</sup></h4>
+     <p>The resources,valueables or financial assets whose economic value or monetary cost would potentially grow over a period of time.<br>
+      future value of a particular possession assists in imparting the probable usefulness of investment that a person would make.
+    </p>
+   </div>
+   <!-- factors -->
+   <div class="col-md">
+    <h4>Some factors required for Future Value estimation</h4>
+   <p>
+     1. Present Value of an asset.<br>
+     2. Rate of return (RoR) that bankers/shareholders reckon.<br>
+     3. Amount of time the investment is to be made.
+   </p>
+ </div>
+   <!-- factors -->
+     <div class="col-md">
+       <h4>How to calculate Future Value (fv) ?</h4>
+       <!-- in easy way -->
+      <p>Given the formula : <span class="formulacalc">FV=PV(1+i)<sup>n</sup></span></p>
+    </div>
+    <!-- where -->
+    <div class="where">
+      <p>Where, <br><span class="spanPV">PV</span> = present value of an asset [ wrist watch for instance ]<br>
+        <span class="spanI">i</span> = interest rate or annual net profit &<br>
+        <span class="spanN">n</span> = amount of time period of an investment.
+      </p>
+    </div>
+   </div>
+  <!-- info -->
 <script src="app.js"></script>
  </body>
 </html> 
