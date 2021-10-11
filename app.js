@@ -13,7 +13,14 @@ function future_value() {
     document.getElementById('periods').innerHTML = timechart.value;
     
     if (document.getElementById('presentvalue').value != '' && document.getElementById('int').innerHTML == '' && document.getElementById('periods').innerHTML == '') {
-        console.log('data is not null');
+        document.getElementById('ceil').innerHTML = '0';
+        document.getElementById('floor').innerHTML = '0';
+    }
+    if (document.getElementById('presentvalue').value != '' && document.getElementById('int').innerHTML != '' && document.getElementById('periods').innerHTML == '') {
+        document.getElementById('ceil').innerHTML = '0';
+        document.getElementById('floor').innerHTML = '0';
+    }
+    if (document.getElementById('presentvalue').value != '' && document.getElementById('int').innerHTML == '' && document.getElementById('periods').innerHTML != '') {
         document.getElementById('ceil').innerHTML = '0';
         document.getElementById('floor').innerHTML = '0';
     }
