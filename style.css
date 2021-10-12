@@ -94,10 +94,12 @@ input[type=number] {
 }
 p {
     font-family: 'Roboto';
+    font-weight: 300;
 }
-h4 {
+h4:not(.formula){
     color: #1f2021;
     font-family: 'Roboto';
+    font-weight: 200;
 }
 .fvequals{
     font-size: 1.5rem;
