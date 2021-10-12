@@ -94,6 +94,7 @@ input[type=number] {
 }
 p {
     font-family: 'Roboto';
+    /* font-weight: 300; */
 }
 h4:not(.formula){
     color: #1f2021;
@@ -107,9 +108,12 @@ h4:not(.formula){
 .note {
     padding-left: 1.5rem;
 }
-.where , .if, .then {
+.where, .if, .then {
     font-size: 1.4rem;
     color: #4285F4;
+}
+#usage, #factors, #howto {
+    margin-top: 2.225rem;
 }
 /* table */
 table {
