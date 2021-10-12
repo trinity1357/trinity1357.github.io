@@ -94,7 +94,6 @@ input[type=number] {
 }
 p {
     font-family: 'Roboto';
-    font-weight: 300;
 }
 h4:not(.formula){
     color: #1f2021;
