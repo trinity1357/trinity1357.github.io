@@ -55,12 +55,8 @@ body{
     text-align: left;
 }
 #info{
-    /* padding: 1.5rem 1.5rem 0; */
     padding: 1.5rem;
 }
-/* #formula {
-    padding-right: 5.125rem;
-} */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -99,9 +95,20 @@ input[type=number] {
 p {
     font-family: 'Roboto';
 }
+h4 {
+    color: #1f2021;
+    font-family: 'Roboto';
+}
 .fvequals{
     font-size: 1.5rem;
     font-weight: 600;
+}
+.note {
+    padding-left: 1.5rem;
+}
+.where , .if, .then {
+    font-size: 1.4rem;
+    color: #4285F4;
 }
 /* table */
 table {
@@ -138,5 +145,8 @@ table {
     }
     .calculate:hover{
         transform: none;
+    }
+    .note {
+        padding: 1.5rem 1.5rem 0;
     }
   }
