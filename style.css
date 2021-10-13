@@ -123,12 +123,13 @@ input[type=number] {
 }
 p:not(.formula, #doughnote) {
     font-family: 'Roboto';
-    color: #414345;
+    color: #2e2d2a;
     font-size: 1.625rem;
     font-weight: 500;
 }
 h4{
-    color: #494844;
+        color: #2e2d2a;
+    /* initial color above */
     font-family: 'Roboto';
     font-weight: 600;
 }
@@ -146,7 +147,8 @@ h4{
 .where, .if, .then {
     font-size: 1.550rem;
     font-weight: 600;
-    color: #4285F4;
+    color: #2e2d2a;
+
 }
 #usage, #factors, #howto, #tvm {
     margin-top: 2.225rem;
