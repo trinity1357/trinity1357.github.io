@@ -5,14 +5,16 @@ body{
 .navbar-brand{
     font-family: 'Open Sans';
     font-size: 2.525rem;
-    letter-spacing: 0.090rem;
-    color: #000;
+    font-weight: 500;
+    letter-spacing: 0.050rem;
+    color: #1f1f1d;
 }
 .navbar-brand:hover {
-    color: #000;
+    color: #1f1f1d;
+
 }
 .navbar-brand:active, .navbar-brand:visited, .navbar-brand:focus {
-    color: #000;
+    color: #1f1f1d;
     text-decoration: none;
 }
 .container{
@@ -30,6 +32,8 @@ body{
     border-color: none;
     box-shadow: none;
     border-radius: 1px;
+    font-weight: 500;
+    font-size: 1.525rem;
 }
   textarea:focus,
 input[type="text"]:focus,
@@ -114,15 +118,18 @@ input[type=number] {
 #doughnote {
     font-family: 'Roboto';
     color: #414345;
+    font-size: 1.525rem;
+    font-weight: 500;
 }
 p:not(.formula, #doughnote) {
     font-family: 'Roboto';
     color: #414345;
-    font-size: 1.425rem;
+    font-size: 1.625rem;
     font-weight: 500;
 }
 h4{
     color: #2e2d2a;
+    font-size: 1.8rem;
     font-family: 'Roboto';
     font-weight: 600;
 }
@@ -188,5 +195,11 @@ table {
     }
     .note {
         padding: 1.5rem 1.5rem 0;
+    }
+    h4 {
+        font-size: 2.225rem;
+    }
+    p:not(.formula, #doughnote) {
+        font-size: 1.525rem;
     }
   }
