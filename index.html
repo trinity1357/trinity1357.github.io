@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
@@ -28,12 +29,12 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957797554061331"
      crossorigin="anonymous"></script> 
  </head>
-   <body>
+  <body>
    <div class="container">
    <!-- As a link -->
    <!-- header -->
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Future Value Calculator</a>
+  <a class="navbar-brand" href="https://trinity1357.github.io/">Future Value Calculator</a>
 </nav>
 <!-- header -->
 <!-- calc -->
@@ -41,15 +42,15 @@
   <form id="form">
     <div class="form-group"> 
       <label for="pvinput">Present Value</label>
-      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value" >
+      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value here" >
     </div>
     <div class="form-group">
       <label for="Enter i">Interest</label>
-      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate">
+      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate here">
     </div>
     <div class="form-group">
       <label for="Enter n">Number of Periods<span>(n)</span></label>
-      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years">
+      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years here">
     </div>
     <div id="calcres">
       <a class="calculate" onclick="future_value()">Calculate</a>
@@ -57,7 +58,7 @@
     </div>
   </form>
 
-  <h3>Future Value : <span id="futureValue"></span></h3>
+  <h3 class="mainfv">Future Value : $<span id="futureValue"></span></h3>
   <table>
     <tr>
       <th>Calculation</th>
@@ -87,7 +88,7 @@
 </div>
 <!-- note -->
 <div class="note">
-  <p>*input values and cross out labels below to get statistical doughnut mappings.</p>
+  <p id="doughnote">*input values and cross out labels below to get statistical doughnut mappings.</p>
 </div>
 <!-- note -->
 <!-- calc -->
@@ -100,23 +101,22 @@
    <div class="container" id="info">
      <!-- layman's terms -->
     <div class="col-md" id="layman">
-      <h4>What is Future Value in layman's terms ?</h4>
-      <p>Future Value formula :</p>
-     <h4 class="formula">FV=PV(1+i)<sup>n</sup></h4>
+      <h4>Future Value</h4>
+      <p>Future Value formula : <span class="formula">FV=PV(1+i)<sup>n</sup></span></p>
      <p>The resources,valueables or financial assets whose economic value or monetary cost would potentially grow over a period of time.<br>
-      future value of a particular possession assists in imparting the probable usefulness of investment that a person would consider to make.
+      Future value of a particular possession assists in imparting the probable usefulness of investment that a person would consider to make.
     </p>
    </div>
    <!-- Fv usage ? -->
    <div class="col-md" id="usage">
-    <h4>Where is Future Value typically used ?</h4>
+    <h4>Future Value Usage</h4>
    <p>Most commonly it is used in determining loans, payments and used in property, building or housing in general.<br>
-    An ideal example would be a savings account in a bank.
+    An ideal example would be a savings account in a bank, where the value of money increases depending on the amount that is been deposited daily, monthly or quarterly and interest rate of the bank.
   </p>
  </div>
    <!-- factors -->
    <div class="col-md" id="factors">
-    <h4>Some factors required for Future Value estimation</h4>
+    <h4>Factors involving Future Value</h4>
    <p>
      1. Present Value of an asset.<br>
      2. Rate of return (RoR) that bankers/shareholders reckon.<br>
@@ -125,12 +125,14 @@
  </div>
    <!-- factors -->
      <div class="col-md" id="howto">
-       <h4>How to calculate Future Value (FV) ?</h4>
-      <p>Given the formula : <span class="formulacalc">FV=PV(1+i)<sup>n</sup></span></p>
+       <!-- How to calculate Future Value (FV) ? -->
+       <h4>Estimation of Future Value</h4>
+      <p>Given the formula : <span class="formulacalc">FV=PV(1+i)<sup>n</sup></span><br>and an asset which is a wrist watch that cost $100 at the moment<br></p>
     </div>
     <!-- where -->
     <div class="wherediv">
-      <p><span class="where">Where</span>, <br><span class="spanPV">PV</span> = present value of an asset [ Value of wrist watch for instance ]<br>
+      <p><span class="where">Where</span>, <br>
+        <span class="spanPV">PV</span> = present value of an asset [ Value of wrist watch for instance ]<br>
         <span class="spanI">i</span> = interest rate or annual net profit &<br>
         <span class="spanN">n</span> = amount of time period of an investment.
       </p>
@@ -147,9 +149,19 @@
     <div class="thendiv">
       <p><span class="then">Then</span>,<br>
         <span class="fvequals">
-        FV = 100 * (1 + 2 / 100)<sup>5</sup> = $110.40808032</span>
+        FV = 100 * (1 + 2 / 100)<sup>5</sup> = $110.40808032</span><br>
+        The Value of wrist watch after 5 years (n) is worth almost $110.
       </p>
     </div>
+    <!-- Time Value of Money -->
+   <div class="col-md" id="tvm">
+    <h4>Time Value of Money</h4>
+   <p>Time Value of Money is a major concept of finance and is superset of future value.
+
+    A set of variables specifically PV, i, n and FV together as a whole contribute to fundamental structure of Time Value of Money.
+    Credit cards/Debit cards, car loans, home loans, or mortages in general depend almost entirely on time value of money.
+  </p>
+ </div>
    </div>
   <!-- info -->
 <script src="app.js"></script>
