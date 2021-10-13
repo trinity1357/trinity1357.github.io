@@ -5,7 +5,7 @@ body{
 .navbar-brand{
     font-family: 'Open Sans';
     font-size: 2.525rem;
-    letter-spacing: 0.100rem;
+    letter-spacing: 0.090rem;
     color: #000;
 }
 .navbar-brand:hover {
@@ -20,11 +20,27 @@ body{
     margin: 0;
 }
 .form-group{
-    font-family: 'Roboto';
+    font-family: 'Lato';
     font-size: medium;
-    font-weight: 100;
-    letter-spacing: 0.125rem;
+    font-weight: 500;
+    letter-spacing: 0.075rem;
     width: 100%;
+}
+#presentvalue, #interest, #time {
+    border-color: none;
+    box-shadow: none;
+    border-radius: 1px;
+}
+  textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: none;
+    border-color: none;
+    box-shadow: none;
+  outline: 1px solid #807f7e;
+  border-radius: 1px;
 }
 .calculate{
     display: inline-block;
@@ -34,7 +50,8 @@ body{
     letter-spacing: 1.5%;
     padding: 8px;
     text-transform: uppercase;
-    background-color: #1c1c1b;
+    /* background-color: #1c1c1b; */
+    background-color: #2e2d2b;
     color: #fff;
     
     margin: 4px;
@@ -76,6 +93,7 @@ input[type=number] {
 }
 #futureValue, #ceil, #floor{
     color: #eb8531;
+    font-weight: 600;
 }
 #pv, #int, #periods {
     color: #1663de;
@@ -87,20 +105,30 @@ input[type=number] {
     width: fit-content;
     height: fit-content;
     padding: 1rem;
+    margin-left: 0.5rem;
 }
 .formulacalc {
     font-family: 'Roboto';
     font-weight: 500;
 }
-p {
+#doughnote {
     font-family: 'Roboto';
     color: #414345;
-    /* font-weight: 300; */
 }
-h4:not(.formula){
-    color: #1f2021;
+p:not(.formula, #doughnote) {
     font-family: 'Roboto';
-    font-weight: 200;
+    color: #414345;
+    font-size: 1.425rem;
+    font-weight: 500;
+}
+h4{
+    color: #2e2d2a;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+.mainfv {
+    font-family: 'Roboto';
+    font-weight: 600;
 }
 .fvequals{
     font-size: 1.5rem;
@@ -110,10 +138,11 @@ h4:not(.formula){
     padding-left: 1.5rem;
 }
 .where, .if, .then {
-    font-size: 1.4rem;
+    font-size: 1.385rem;
+    font-weight: 600;
     color: #4285F4;
 }
-#usage, #factors, #howto {
+#usage, #factors, #howto, #tvm {
     margin-top: 2.225rem;
 }
 /* table */
@@ -126,14 +155,19 @@ table {
    th {
     font-size: 1.525rem;
     outline: 1px solid #e3e3e3;
+    font-size: 1.6rem;
     text-align: left;
     padding: 8px;
+    font-family: 'Roboto';
   }
   td {
-      font-weight: 500;
+      font-family: 'Roboto';
+      font-weight: 600;
       outline: 1px solid #e3e3e3;
+      color: #63625d;
       text-align: left;
       padding: 8px;
+      font-size: 1.325rem;
   }
   
   tr:nth-child(even) {
