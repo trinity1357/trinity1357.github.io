@@ -30,15 +30,19 @@
      crossorigin="anonymous"></script> 
  </head>
   <body>
-   <div class="container">
-   <!-- As a link -->
+       <!-- As a link -->
    <!-- header -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="https://trinity1357.github.io/">Future Value Calculator</a>
+   <header aria-details="Future Value Calculator">
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">Future Value Calculator</a>
+  </div>
 </nav>
+</header>
 <!-- header -->
+   <div class="container">
 <!-- calc -->
-<div class="col-md-6">
+<div class="col-md-6" id="col-md-6-id">
   <form id="form">
     <div class="form-group"> 
       <label for="pvinput">Present Value</label>
@@ -166,4 +170,4 @@
   <!-- info -->
 <script src="app.js"></script>
  </body>
-</html> 
+ </html> 
