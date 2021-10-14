@@ -1,6 +1,11 @@
-body{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
 }
 .navbar-brand{
     font-family: 'Open Sans';
@@ -16,10 +21,6 @@ body{
 .navbar-brand:active, .navbar-brand:visited, .navbar-brand:focus {
     color: #1f1f1d;
     text-decoration: none;
-}
-.container{
-    padding: 0;
-    margin: 0;
 }
 .form-group{
     font-family: 'Lato';
@@ -54,7 +55,6 @@ input[type="color"]:focus,
     letter-spacing: 1.5%;
     padding: 8px;
     text-transform: uppercase;
-    /* background-color: #1c1c1b; */
     background-color: #2e2d2b;
     color: #fff;
     
@@ -75,6 +75,9 @@ input[type="color"]:focus,
 #calcres {
     text-align: left;
 }
+#col-md-6-id {
+    padding: 0;
+}
 #info{
     padding: 1.5rem;
 }
@@ -89,6 +92,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+input:focus::placeholder {
+    color: transparent;
+  }
 #chart {
     display: flex;
     aspect-ratio: 100 /20;
@@ -129,7 +135,6 @@ p:not(.formula, #doughnote) {
 }
 h4{
         color: #2e2d2a;
-    /* initial color above */
     font-family: 'Roboto';
     font-weight: 600;
     font-size: 1.825rem;
@@ -200,5 +205,8 @@ table {
     }
     p:not(.formula, #doughnote) {
         font-size: 1.525rem;
+    }
+    .navbar-brand {
+        padding-left: 0;
     }
   }
