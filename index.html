@@ -45,18 +45,20 @@
   <form id="form">
     <div class="form-group"> 
       <label for="pvinput">Present Value</label>
-      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="" placeholder="Enter Present Value here" >
+      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="">
     </div>
     <div class="form-group">
-      <label for="Enter i">Interest</label>
-      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()" placeholder="Enter Interest/Yield Rate here">
+      <label for="Enterint">Interest</label>
+      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()">
     </div>
     <div class="form-group">
-      <label for="Enter n">Number of Periods<span>(n)</span></label>
-      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()" placeholder="Enter Number of Periods (n) in years here">
+      <label for="Entern">Number of Periods<span>(n)</span></label>
+      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()">
     </div>
     <div id="calcres">
       <a class="calculate" onclick="future_value()">Calculate</a>
+    </div>
+    <div id="resres">
       <a class="calculate" onclick="future_reset()">Reset</a>
     </div>
   </form>
@@ -64,27 +66,23 @@
   <h3 class="mainfv">Future Value : $<span id="futureValue"></span></h3>
   <table>
     <tr>
-      <th>Calculation</th>
-      <th>Values</th>
-    </tr> 
-    <tr>
-      <td>Present Value</td>
+      <td id="pvtable">Present Value</td>
       <td id="pv"></td>
     </tr>
     <tr>
-      <td>Interest/Yield Rate</td>
+      <td id="intable">Interest/Yield Rate</td>
       <td id="int"></td>
     </tr>
     <tr>
-      <td>Number of Periods (n)</td>
+      <td id="tabletime">Number of Periods (n)</td>
       <td id="periods"></td>
     </tr>
     <tr>
-      <td>Ceil (FV)</td>
+      <td id="ceiltable">Ceil (FV)</td>
       <td id="ceil"></td>
     </tr>
     <tr>
-      <td>Floor (FV)</td>
+      <td id="floortable">Floor (FV)</td>
       <td id="floor"></td>
     </tr>
   </table>
@@ -151,6 +149,17 @@
     <!-- then -->
     <div class="thendiv">
       <p><span class="then">Then</span>,<br>
+        first we get the base and exponent<br>
+        our base is interest rate divided by 100 + 1<br>
+        that is 2 divide by 100 + 1<br>
+        we get 1.02<br>
+        our exponent is number of years (n) which is 5<br>
+        now solve the base and exponent<br>
+        we get 1.1040808032<br>
+        finally,<br>
+        multiply this value with the present value,<br>
+        1.1040808032 * 100 and we get our answer.<br>
+        $110.40808032.<br>
         <span class="fvequals">
         FV = 100 * (1 + 2 / 100)<sup>5</sup> = $110.40808032</span><br>
         The value of wrist watch after 5 years (n) is $110.
