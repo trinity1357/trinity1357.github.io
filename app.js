@@ -8,8 +8,8 @@ function future_value() {
     document.getElementById('futureValue').innerHTML = futureval;
     document.getElementById('ceil').innerHTML = Math.ceil(futureval);
     document.getElementById('floor').innerHTML = Math.floor(futureval);
-    document.getElementById('pv').innerHTML = presentvaluechart.value;
-    document.getElementById('int').innerHTML = interestchart.value;
+    document.getElementById('pv').innerHTML = '$' + presentvaluechart.value;
+    document.getElementById('int').innerHTML = interestchart.value + '%';
     document.getElementById('periods').innerHTML = timechart.value;
     
     if (document.getElementById('presentvalue').value != '' && document.getElementById('int').innerHTML == '' && document.getElementById('periods').innerHTML == '') {
