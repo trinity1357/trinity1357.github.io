@@ -73,7 +73,7 @@ var myChart = new Chart(ctx, {
                 'rgba(252, 125, 116)',
                 'rgba(255, 206, 86, 0.2)',
             ],
-            hoverOffset: 1.5,
+            borderWidth: 0,
         }],
         
     },
