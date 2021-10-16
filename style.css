@@ -14,6 +14,8 @@ body {
     letter-spacing: 0.050rem;
     /* color: #1f1f1d; */
     color: #5f6368;
+    line-height: 2.325rem;
+    height: max-content;
 }
 .navbar-brand:hover {
     color: #5f6368;
@@ -112,6 +114,8 @@ input[type=number] {
     word-break: break-all;
     text-align: center;
     color: #1663de;
+    font-family: 'Roboto';
+    font-size: 1.625rem;
 }
 label {
     font-family: 'Lato';
@@ -123,7 +127,8 @@ label {
     outline: 1px solid #e3e3e3;
     width: fit-content;
     height: fit-content;
-    padding: 1rem;
+    line-height: 5rem;
+    padding: 1.225rem;
     margin-left: 0.5rem;
 }
 .formulacalc {
@@ -139,28 +144,48 @@ label {
 p:not(.formula, #doughnote) {
     font-family: 'Roboto';
     color: #2e2d2a;
-    font-size: 1.625rem;
+    font-size: 1.88895rem;
     font-weight: 500;
 }
+.p-alternate {
+    margin-left: 20px;
+    font-family: 'Roboto';
+    color: #2e2d2a;
+    font-size: 1.88895rem;
+    font-weight: 500;
+}
+ul {
+    list-style: none;
+  }
+  
+  ul li::before {
+    content: "\2022";
+    color: #1a1c1b;
+    transform: scale(1.5);
+    font-weight: bold;
+    display: inline-block; 
+    width: 0.9em;
+    margin-left: -0.9em;
+  }
 h4{
-        color: #2e2d2a;
+        color: #202124;
     font-family: 'Roboto';
     font-weight: 600;
-    font-size: 1.825rem;
+    font-size: 2.222225rem;
 }
 .mainfv {
     font-family: 'Roboto';
     font-weight: 600;
 }
 .fvequals{
-    font-size: 1.5rem;
+    font-size: 1.888889rem;
     font-weight: 600;
 }
 .note {
     padding-left: 1.5rem;
 }
 .where, .if, .then {
-    font-size: 1.550rem;
+    font-size: 1.888889rem;
     font-weight: 600;
     color: #2e2d2a;
 
@@ -186,6 +211,7 @@ table {
   #pvtable, #intable, #tabletime, #ceiltable, #floortable {
       font-family: 'Roboto';
       font-size: 1.625rem;
+      width: 50%;
   }
   tr{
       font-family: 'Roboto';
@@ -203,9 +229,6 @@ table {
     }
     .note {
         padding: 1.5rem 0 0 0;
-    }
-    p:not(.formula, #doughnote) {
-        font-size: 1.525rem;
     }
     .navbar-brand {
         padding-left: 0;
