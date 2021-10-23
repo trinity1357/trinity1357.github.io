@@ -1,0 +1,12 @@
+<svg width="153" height="125" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" stroke-width="2" filter="url(#svg_1_blur)" id="svg_1" height="123" width="151" y="1" x="1" fill="#000000"/>
+  <text transform="matrix(1.47405 0 0 1.40313 -250.516 -181.029)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="'Noto Serif Display'" font-size="24" id="svg_3" y="181.50901" x="194.86943" stroke-width="0" fill="#ffffff">TVM</text>
+ </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="232" height="232" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <path stroke-width="5" id="svg_1" d="m116,229.5c-62.70718,0 -113.5,-50.79282 -113.5,-113.5c0,-62.70718 50.79282,-113.5 113.5,-113.5c62.70718,0 113.5,50.79282 113.5,113.5c0,62.70718 -50.79282,113.5 -113.5,113.5z" opacity="undefined" stroke="#000" fill="#fff"/>
+  <line transform="rotate(-1.87788 110.5 102)" stroke-width="5" stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="132.5" x2="109.5" y1="71.5" x1="111.5" fill="none"/>
+  <path id="svg_3" d="m108.5,130.5l81,0" opacity="undefined" stroke-width="5" stroke="#000" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_5" y="47.5" x="86.5" stroke-width="0" stroke="#000" fill="#000000">$100</text>
+  <text fill="#fff" stroke="#000" stroke-width="5" x="146.5" y="159.5" id="svg_4" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_6" y="173.5" x="135.5" stroke-width="0" stroke="#000" fill="#000000">$105</text>
+ </g>
+
+</svg>
