@@ -26,9 +26,6 @@
 <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
@@ -50,153 +47,270 @@
    <!-- header -->
    <header aria-details="Future Value Calculator">
 <nav class="navbar">
-  <div class="container">
-    <a class="navbar-brand" href="https://trinity1357.github.io/">Future Value Calculator</a>
+  <div class="container" id="navcontainer">
+    <a class="navbar-brand" href="#">
+      <img src="Tr.png" width="30" height="30" alt="">
+    </a>
+    <a class="navbar-brand" id="brand-text" href="#">Trinity Finance</a>
+    <div class="desktoplinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    </div>
+    <button class="hamburger"><div class="bar"></div></button>
   </div>
+</nav>
+<nav class="mobile-nav">
+  <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
 </nav>
 </header>
 <!-- header -->
    <div class="container">
+    <h1 class="heading" aria-label="Future Value Calculator" aria-describedby="Future Value Calculator">Future Value Calculator</h1>
 <!-- calc -->
 <div class="col-md-6" id="col-md-6-id">
-  <form id="form">
-    <div class="form-group"> 
-      <label for="pvinput">Present Value</label>
-      <input type="number" class="form-control" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="">
+  <div class="form">
+    <input type="number" class="input" id="presentvalue" alt="Present Value" aria-describedby="presentval" onchange="updatechart()" value="">
+    <label for="present value" class="inputlabel">Present Value</label>
+  </div>
+  <div class="form2">
+    <input type="number" class="input2" id="interest" alt="Interest rate" value="" onchange="updatechart()">
+    <label for="interest rate" class="intlabel">Interest Rate</label>
+  </div>
+  <div class="form3">
+    <input type="number" class="input3" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()">
+    <label for="time period" class="timelabel" >Time Period</label>
+  </div>
+  <div class="form4">
+    <input type="number" class="input4" id="pmt" alt="Periodic Monthly Payments" value="" data-value="" onchange="updatechart()">
+    <label for="pmt" class="pmtlabel">PMT</label>
+  </div>
+  <div class="select">
+    <input type="radio" id="begin" name="fav_language" value="HTML">
+  <label for="begin" id="start">beginning</label>
+  <input type="radio" id="endinput" name="fav_language" value="CSS">
+  <label for="endinput" id="end">end</label>
+<a class="disclaimerbutton"><img src="disclaimer.svg" alt="disclaimer">
+  <span class="tooltiptext">default type is 0 (end).</span>
+</a>
+  </div>
+    <div class="calculate-container" id="calcres">
+      <div class="calculate">
+        <a class="btn2" onclick="future_value()">Calculate</a>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="Enterint">Interest</label>
-      <input type="number" class="form-control" id="interest" alt="Interest rate" value="" onchange="updatechart()">
+    <div class="calculate-container" id="resres">
+      <div class="calculate">
+        <a class="btn2" onclick="future_reset()">Reset</a>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="Entern">Number of Periods<span>(n)</span></label>
-      <input type="number" class="form-control" id="time" alt="Time Period" value="" data-value="" onchange="updatechart()">
+  <!-- </form> -->
+  <h2 class="mainfv">Future Value : $<span id="futureValue"></span></h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" id="table_container">
+        <table>
+          <tr>
+            <td id="initial-amount-table">Initial Amount ($)</td>
+            <td id="initial-amount-id"></td>
+          </tr>
+          <tr>
+            <td id="pvtable">Present Value ($)</td>
+            <td id="pv"></td>
+          </tr>
+          <tr>
+            <td id="intable">Interest/Yield Rate (%)</td>
+            <td id="int"></td>
+          </tr>
+          <tr>
+            <td id="tabletime">Number of Periods (n)</td>
+            <td id="periods"></td>
+          </tr>
+          <tr>
+            <td id="pmtable">PMT ($)</td>
+            <td id="pmtop"></td>
+          </tr>
+          <tr>
+            <td id="ceiltable">Ceil (FV)</td>
+            <td id="ceil"></td>
+          </tr>
+          <tr>
+            <td id="floortable">Floor (FV)</td>
+            <td id="floor"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-6" id="formula_container_resp">
+        <img src="svg_arrow.svg" alt="Future Value Formula Indication" class="indication"><span class="FV_formula">
+          Future Value Formula
+        </span><br>
+        <h3 class="formula">FV=PV(1+i)<sup>n</sup></h3><br>
+        <p>Above formula will estimate future value of an asset when the present value(PV), rate of interest(i) and number of periods(n)
+          are provided.Future value helps estimate the worth of an asset in later point in time.
+        </p>
+      </div>
     </div>
-    <div id="calcres">
-      <a class="calculate" onclick="future_value()">Calculate</a>
-    </div>
-    <div id="resres">
-      <a class="calculate" onclick="future_reset()">Reset</a>
-    </div>
-  </form>
-
-  <h3 class="mainfv">Future Value : $<span id="futureValue"></span></h3>
-  <table>
-    <tr>
-      <td id="pvtable">Present Value</td>
-      <td id="pv"></td>
-    </tr>
-    <tr>
-      <td id="intable">Interest/Yield Rate</td>
-      <td id="int"></td>
-    </tr>
-    <tr>
-      <td id="tabletime">Number of Periods (in years)</td>
-      <td id="periods"></td>
-    </tr>
-    <tr>
-      <td id="ceiltable">Ceil (FV)</td>
-      <td id="ceil"></td>
-    </tr>
-    <tr>
-      <td id="floortable">Floor (FV)</td>
-      <td id="floor"></td>
-    </tr>
-  </table>
+  </div>
 </div>
-<!-- note -->
-<div class="note">
-  <p id="doughnote">*input values and cross out labels below to get statistical doughnut mappings.</p>
-</div>
-<!-- note -->
 <!-- calc -->
 <div class="col" id="chart">
   <canvas id="myChart"></canvas>
 </div>
-
-   </div>
+<div class="col-md-6" id="formula_container_for_991">
+  <img src="svg_arrow.svg" alt="Future Value Formula Indication" class="indication"><span class="FV_formula">
+    Future Value Formula
+  </span><br>
+  <h3 class="formula">FV=PV(1+i)<sup>n</sup></h3><br>
+  <p class="p_text_for_991">Above formula will estimate future value of an asset when the present value(PV), rate of interest(i) and number of periods(n)
+    are provided.
+  </p>
+</div>
+ </div>
+   <!-- </div> -->
    <!-- info -->
    <div class="container" id="info">
-     <!-- layman's terms -->
-    <div class="col-md" id="layman">
-      <h4>Future Value</h4>
-      <p>Future Value formula : <span class="formula">FV=PV(1+i)<sup>n</sup></span></p>
-     <p>The resources,valueables or financial assets whose economic value or monetary cost would potentially grow over a period of time.<br>
-      Future value of a particular possession assists in imparting the probable usefulness of investment that a person would consider to make.
-    </p>
-   </div>
-   <!-- Fv usage ? -->
-   <div class="col-md" id="usage">
-    <h4>Future Value Usage</h4>
-   <p>Most commonly it is used in determining loans, payments and used in property, building or housing in general.<br>
-    An ideal example would be a savings account in a bank, where the value of money increases depending on the amount that is been deposited daily, monthly or quarterly and interest rate of the bank.
-  </p>
- </div>
-   <!-- factors -->
-   <div class="col-md" id="factors">
-    <h4>Factors involving Future Value</h4>
-   <p>
-     <span><ul aria-details="Factors to take into consideration while estimating Future Value">
-       <li aria-describedby="Factor one which is PV" class="p-alternate">Present Value of an asset.</li>
-       <li aria-describedby="Factor two which is Interest Rate" class="p-alternate">Rate of return (RoR) that bankers/shareholders reckon.</li>
-       <li aria-describedby="Factor three which is Time Peroid" class="p-alternate">Amount of time the investment is to be made.</li>
-       <li aria-describedby="Factor four which is annually paid amount monthly" class="p-alternate">PMT (periodic monthly payments).</li>
-    </ul></span>
-   </p>
- </div>
-   <!-- factors -->
-     <div class="col-md" id="howto">
-       <!-- How to calculate Future Value (FV) ? -->
-       <h4>Estimation of Future Value</h4>
-       <p>Calculating Future Value without PMT (periodic monthly payments).</p>
-      <p>Given the formula : <span class="formulacalc">FV=PV(1+i)<sup>n</sup></span><br>and an asset which is a wrist watch that cost $100 at the moment<br></p>
-    </div>
-    <!-- where -->
-    <div class="wherediv">
-      <p><span class="where">Where</span>, <br>
-        <span class="spanPV">PV</span> = present value of the asset<br>
-        <span class="spanI">i</span> = interest rate or annual net profit &<br>
-        <span class="spanN">n</span> = amount of time period of an investment.
-      </p>
-    </div>
-    <!-- if -->
-    <div class="ifdiv">
-      <p><span class="if">If</span>, <br>
-        PV = $100<br>
-        i = 2 %<br>
-        n = 5 (in years)
-      </p>
-    </div>
-    <!-- then -->
-    <div class="thendiv">
-      <p><span class="then">Then</span>,<br>
-        we first get the base and exponent<br>
-        our base is interest rate divided by 100 + 1<br>
-        that is 2 divide by 100 + 1<br>
-        we get 1.02<br>
-        our exponent is number of years (n) which is 5<br>
-        now solve the base and exponent<br>
-        we get 1.1040808032<br>
-        finally,<br>
-        multiply this value with the present value,<br>
-        1.1040808032 * 100 and we get our answer.<br>
-        $110.40808032.<br>
-        <span class="fvequals">
-        FV = 100 * (1 + 2 / 100)<sup>5</sup> = $110.40808032</span><br>
-        The value of wrist watch after 5 years is $110.
-      </p>
-    </div>
-    <!-- Time Value of Money -->
-   <div class="col-md" id="tvm">
-    <h4>Time Value of Money</h4>
-   <p>Time Value of Money is a major concept of finance and is superset of future value.
-
-    A set of variables specifically PV, i, n and FV together as a whole contribute to fundamental structure of Time Value of Money.
-    Credit cards/Debit cards, car loans, home loans, or mortages in general depend almost entirely on time value of money.
-  </p>
- </div>
    </div>
   <!-- info -->
-<script src="app.js"></script>
+  </div>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <img src="tile.svg" alt="Future Value Formula Indication" class="tile"> -->
+          <span class="formula_with_pmt">
+            when pmt comes into play
+          </span><br>
+          <h3 class="fv_along_pmt_pv">FV = PMT [(1+(i/100))<sup>n</sup> -1/(i/100)] + PV(1+(i/100))<sup>n</sup></h3><br>
+          <p>
+            Future Value along with Periodic Monthly Payments (PMT) and Present Value (PV) will help you find
+            out the future worth of an asset when amount is paid on a periodic basis and the current
+            value (PV) of that particular asset is known.
+          </p>
+        </div>
+        <div class="col-md-6" id="clock">
+          <!-- <h5 class="clock_description">This clock describes how monetary value increases over time.</h5> -->
+          <img src="clock_FV.svg" alt="Future Value example Time Value of Money example" class="clock_FV">
+        </div>
+        <div class="col-md-6" id="clock_none">
+          <h5 class="clock_description">A simple clock illustration that demonstrates how monetary value increases over time.</h5>
+          <!-- <img src="clock_FV.svg" alt="Future Value example Time Value of Money example" class="clock_FV"> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Time Value of Money image">
+    <div class="container" id="tvm">
+      <img src="tvm_svg.svg" alt="Time Value of Money" class="tvm_svg">
+      <span class="tvm_heading">time value of money</span>
+    </div>
+  </section>
+  <section aria-roledescription="Time Value of Money">
+    <div class="tvm_description container">
+      
+      <p class="query-tvm">Would you rather eat fresh food today or let it rot for some time and then consider eating?
+      </p><br>
+      <p>
+        Time Value of Money not exactly but kind of works in a similar way say for instance,
+        you have fresh apple you or any sane person would probably munch on it before it gets putrid and lose all it's nutritional
+        value and novelty.Here
+        the apple you have is the 'ASSET' and the freshness or newness of apple is the 'VALUE'.So if you eat your fruit
+        now when it's fresh you could possibly reap the benefits more rather than consuming it later point in time. This example is
+        what tells you that an assets current value is more than it would be in future.Monetary value of an asset is worth more
+        now that it would be in later point in time.one major factor that affects the economic value of an asset is 'TIME'.$10 today
+        could be $15 in one or five years.</p>
+    </div>
+  </section>
+  <section class="for_desktop">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="credit-card container">
+            <img src="credit-card.svg" alt="credit-card time value of money" class="credit-card">
+          </div>
+        </div>
+        <div class="col-md-8">
+            <div class="cred-tvm container">
+              <h5 class="credit-card-tvm-heading">tvm impact on credit cards</h5>
+              <p class="credit-card-tvm-info">when a person buys an item from a store it could be an online store or local electronics store,
+                the transaction that is made makes a huge impact on the credit score that inturn could potentially ruin that individual's credit history depending
+                on the amount of transaction.
+              </p>
+              <p class="credit-card-tvm-info">purchases made through credit cards are considered as cashflow that is directed
+                outwards resulting in loss of money meaning the sum of money that you currently paid had more value than the value that was 
+                about to be in future. 
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-describedby="future value time value of money" class="for_tablets">
+    <div class="container">
+      <h5 class="credit-card-tvm-heading">
+        tvm impact on credit cards
+      </h5>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="credit-card.svg" alt="credit-card time value of money" class="credit-card">
+        </div>
+        <div class="col-sm-6">
+          <p class="credit-card-tvm-info">when a person buys an item from a store it could be an online store or local electronics store,
+            the transaction that is made makes a huge impact on the credit score that inturn could potentially ruin that individual's credit history depending
+            on the amount of transaction.
+          </p>
+          <p class="credit-card-tvm-info">purchases made through credit cards are considered as cashflow that is directed
+            outwards resulting in loss of money meaning the sum of money that you currently paid had more value than the value that was 
+            about to be in future. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-describedby="future value time value of money" class="for_mobile">
+    <div class="container">
+      <h5 class="credit-card-tvm-heading">
+        tvm impact on credit cards
+      </h5>
+      <img src="credit-card.svg" alt="credit-card time value of money" class="credit-card">
+      <p class="credit-card-tvm-info">when a person buys an item from a store it could be an online store or local electronics store,
+        the transaction that is made makes a huge impact on the credit score that inturn could potentially ruin that individual's credit history depending
+        on the amount of transaction.
+      </p>
+      <p class="credit-card-tvm-info">purchases made through credit cards are considered as cashflow that is directed
+        outwards resulting in loss of money meaning the sum of money that you currently paid had more value than the value that was 
+        about to be in future. 
+      </p>
+    </div>
+  </section>
+  <section aria-describedby="time value of money bottomline">
+    <div class="bottomlinecontainer container">
+      <p>
+        <span class="bottomline">Bottomline : </span> Time Value of Money is a major concept of finance and is superset of future value.
+        A set of variables specifically PV, i, n and FV together as a whole contribute to fundamental structure of Time Value of Money.
+        Credit cards/Debit cards, car loans, home loans, or mortage payments depend almost entirely on time value of money.
+          </p>
+    </div>
+  </section>
+  <!-- Footer -->
+<footer class="footer-pg" id="footerid">
+  <div class="container" id="links">
+      <ul class="all-list-wrap">
+        <li class="linklist"><a class="footerlinks" href="#">Privacy Policy</a></li>
+        <li class="linklist"><a class="footerlinks" href="#">Terms and Conditions</a></li>
+        <li class="linklist"><a class="footerlinks" href="#">Cookies</a></li>
+      </ul>
+    <div class="copyrightdiv">
+      © 2021 Copyright:
+      <a href="https://trinity1357.github.io" class="trin">Trinity Finance</a>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+</div>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript"></script>
+  <script src="app.js"></script>
  </body>
  </html> 
