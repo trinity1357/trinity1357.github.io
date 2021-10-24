@@ -84,7 +84,7 @@ body {
 .mobile-nav.is-active {
     left: 0;
 }
-.mobile-nav a{
+.mobile-nav a:not(.fa){
     display: block;
     margin: 0 auto 16px;
     width: fit-content;
@@ -422,7 +422,6 @@ h3{
     font-size: 25px;
 }
 .mainfv {
-    /* font-family: 'Roboto', sans-serif; initial */
     font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
     font-size: 25px;
     font-weight: 800;
@@ -588,18 +587,20 @@ table {
 }
 .tvm_description {
     margin-top: 32px;
+    margin-bottom: 32px;
 }
 .credit-card {
     width: 320px;
     height: 320px;
     margin-right: 10px;
 }
-.credit-card-tvm-heading {
+.credit-card-tvm-heading, .tvm-in-automotive {
     font-family: 'adineue_pro_bold' ,Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
     color: #000000;
     text-transform: uppercase;
+    margin-bottom: 32px;
 }
 .cred-tvm {
     width: 550px;
@@ -616,6 +617,50 @@ table {
 .bottomlinecontainer {
     margin-top: 38px;
 }
+.fa {
+    font-size: 50px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #FFF;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+  }
+  .social {
+    display: block;
+    margin: 0 auto 16px;
+    width: fit-content;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'adihaus_bold';
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+  }
+  .automobile_svg {
+      max-width: 100%;
+      max-height: 100%;
+      margin-top: 32px;
+      margin-bottom: 32px;
+  }
+  .additional-aut {
+      margin-top: 28px;
+  }
+  .question {
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      font-size: 21px;
+      font-weight: bold;
+  }
+  .try {
+      font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000;
+  }
 @media only screen and (max-width: 767px) {
     /* For mobile phones: */
     .form-group{
@@ -696,6 +741,9 @@ table {
     .credit-card-tvm-heading {
         margin-top: 32px;
     }
+    .credit-card-tvm-info-second {
+        margin-bottom: 36px;
+    }
   }
   
   @media only screen and (min-width: 767px) {
@@ -745,8 +793,16 @@ table {
           display: none;
       }
 }
+@media only screen and (max-width: 991px) {
+    .automobile_desktop {
+        display: none;
+    }
+}
 @media only screen and (min-width: 992px) {
     .for_tablets {
+        display: none;
+    }
+    .automobile_phones {
         display: none;
     }
 }
