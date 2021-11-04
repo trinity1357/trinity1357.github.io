@@ -243,7 +243,7 @@ input[type='radio']:checked:after {
 }
 .navbar-brand{
     font-family: 'Montserrat';
-    font-size: 2.525rem;
+    font-size: 25px;
     font-weight: 800;
     color: #5f6368;
     height: max-content;
@@ -291,7 +291,7 @@ input[type="color"]:focus,
     color: #000000;
     text-decoration: none;
     padding: 20px 50px;
-    font-size: 1.25rem;
+    font-size: 25px;
     position: relative;
     margin-bottom: 100px;
     text-align: center;
@@ -403,13 +403,6 @@ p:not(.formula, #doughnote) {
     font-size: 21px;
     font-weight: 500;
 }
-.p-alternate {
-    margin-left: 20px;
-    font-family: 'Roboto';
-    color: #2e2d2a;
-    font-size: 1.88895rem;
-    font-weight: 500;
-}
 ul {
     list-style: none;
   }
@@ -441,16 +434,6 @@ h3{
     margin-top: 23px;
     margin-bottom: 100px;
 }
-.fvequals{
-    font-size: 1.888889rem;
-    font-weight: 600;
-}
-.where, .if, .then {
-    font-size: 1.888889rem;
-    font-weight: 600;
-    color: #2e2d2a;
-
-}
 #usage, #factors, #howto, #tvm {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -475,7 +458,7 @@ table {
       padding-right: 8px;
       padding-top: 15px;
       padding-bottom: 15px;
-      font-size: 1.325rem;
+      font-size: 25px;
   }
   #initial-amount-table, #pvtable, #intable, #tabletime, #ceiltable, #floortable, #pmtable {
       font-family: 'Noto Serif', serif;
@@ -562,9 +545,6 @@ table {
     text-transform: uppercase;
     margin-bottom: 100px;
 }
-/* #futurevalofmoneycalc {
-    margin-top: 100px;
-} */
 #future-val-with-pmt{
     margin-top: 60px;
     margin-bottom: 60px;
