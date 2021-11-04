@@ -152,10 +152,12 @@ body {
     margin-top: -5px;
     width: 100%;
 }
-  
+  .disclaimerbutton {
+      font-size: 28px;
+  }
   .disclaimerbutton .tooltiptext {
       font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      font-size: 17px;
     visibility: hidden;
     width: fit-content;
     background-color: #242424;
@@ -165,7 +167,7 @@ body {
     padding: 8px 10px 8px 10px;
     position: absolute;
     z-index: 1;
-    margin-left: -192px;
+    margin-left: -212px;
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -185,9 +187,13 @@ body {
 #start, #end {
     font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 28px;
     color: #424242;
     cursor: pointer;
+    margin-bottom: 50px;
+}
+#start {
+    margin-top: 50px;
 }
 #begin, #endinput {
     cursor: pointer;
@@ -207,14 +213,15 @@ input[type='radio']:checked:after {
 }
 .form, .form2, .form3, .form4 {
     outline: 1px solid #767677;
-    height: 35px;
+    height: 50px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     border-radius: 0;
 }
 .input, .input2, .input3, .input4 {
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 600;
     width: 100%;
     height: 100%;
     border: 0;
@@ -224,13 +231,13 @@ input[type='radio']:checked:after {
 }
 .inputlabel, .intlabel, .timelabel, .pmtlabel {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 400;
     overflow: hidden;
     color: #424242;
     position: relative;
     left: 10px;
-    top: -51px;
+    top: -72px;
     background-color: #fff;
     height: fit-content;
 }
@@ -254,12 +261,12 @@ input[type='radio']:checked:after {
 .heading {
     font-family: 'adineue_pro_bold', Helvetica, Arial, sans-serif;
     color: #000000;
-    font-size: 26px;
+    font-size: 38px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-top: -3px;
-    margin-bottom: 25px;
+    margin-top: 32px;
+    margin-bottom: 62px;
     padding: 0;
     
 }
@@ -286,7 +293,7 @@ input[type="color"]:focus,
     padding: 20px 50px;
     font-size: 1.25rem;
     position: relative;
-    margin-bottom: 22px;
+    margin-bottom: 100px;
     text-align: center;
 }
 .btn2 {
@@ -356,7 +363,7 @@ input[type=number] {
 #futureValue {
     color:  rgba(252, 125, 116);
     font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 800;
 }
 #ceil, #floor{
@@ -378,6 +385,7 @@ input[type=number] {
 .formula {
     font-family: 'Roboto';
     font-weight: 600;
+    font-size: 25px;
     outline: 1px solid #e3e3e3;
     width: fit-content;
     height: fit-content;
@@ -422,15 +430,16 @@ h3{
     font-size: 25px;
 }
 .mainfv {
-    font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'adihaus_regular', Arial, Helvetica, sans-serif; */
+    font-size: 32px;
     font-weight: 800;
     color: #212121;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 2px;
     margin-top: 23px;
-    margin-bottom: 28px;
+    margin-bottom: 100px;
 }
 .fvequals{
     font-size: 1.888889rem;
@@ -443,7 +452,8 @@ h3{
 
 }
 #usage, #factors, #howto, #tvm {
-    margin-top: 2.225rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 /* table */
 table {
@@ -452,14 +462,19 @@ table {
     width: 100%;
     margin: 0;
     padding: 0;
-    outline: 1px solid #bababa;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    border-left: 1px solid #dedede;
   }
   td {
       font-family: 'Roboto';
       font-weight: 600;
       color: #1f1f1d;
       text-align: left;
-      padding: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 15px;
+      padding-bottom: 15px;
       font-size: 1.325rem;
   }
   #initial-amount-table, #pvtable, #intable, #tabletime, #ceiltable, #floortable, #pmtable {
@@ -476,16 +491,17 @@ table {
 /* table */
 #footerid {
     display: flex;
-    height: 320px;
+    height: 520px;
     margin-top: 20px;
     background-color: #000;
 }
 #links {
     padding-left: 30px;
+    text-align: center;
 }
 .footerlinks {
     font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     text-decoration: none;
 }
 .footerlinks:hover {
@@ -495,7 +511,7 @@ table {
     padding: 100px 0 0 0;
 }
 .linklist {
-    margin-bottom: 3px;
+    margin-bottom: 100px;
 }
 .linklist::before {
     color: #6b6b6b;
@@ -504,13 +520,13 @@ table {
     display: block;
     text-align: center;
     font-family: 'AdihausDIN',Arial, Helvetica, sans-serif;
+    font-size: 18px;
     color: #6b6b6b;
     position: relative;
-    bottom: -38px;
 }
 .trin {
     font-family: 'AdihausDIN', Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     text-decoration: none;
 }
 .trin:hover {
@@ -534,15 +550,36 @@ table {
     font-size: 28px;
     font-weight: bold;
     color: #000000;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+}
+#howtocalculatefv, #futurevalofmoneycalc {
+    font-family: 'adineue_pro_bold' ,Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+/* #futurevalofmoneycalc {
+    margin-top: 100px;
+} */
+#future-val-with-pmt{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#fvwithpmtdescription {
+    margin-bottom: 100px;
 }
 .fv_along_pmt_pv {
     font-family: 'Roboto';
     font-weight: 600;
+    font-size: 25px;
     outline: 1px solid #e3e3e3;
     width: fit-content;
     height: fit-content;
+    margin-bottom: 100px;
     line-height: 5rem;
     padding: 1.225rem;
 }
@@ -558,12 +595,14 @@ table {
     font-weight: bold;
     font-size: 23px;
     color: #000000;
+    margin-top: 152px;
 }
 .clock_des_mobile {
     font-size: 20px;
 }
 #table_container {
     margin: 0;
+    margin-bottom: 52px;
     padding: 0;
 }
 #formula_container_resp {
@@ -581,6 +620,7 @@ table {
     font-family: 'adineue_pro_bold', Arial, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: bold;
+    letter-spacing: 1px;
     color: #000000;
     text-transform: uppercase;
     margin-left: 20px;
@@ -599,16 +639,25 @@ table {
     font-size: 28px;
     font-weight: bold;
     color: #000000;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 100px;
+}
+.credit-card-tvm-info {
+    margin-top: 100px;
 }
 .cred-tvm {
     width: 550px;
 }
-.query-tvm {
+#query-tvm, #knowFV, #determine{
+    font-family: 'Roboto', sans-serif;
     font-size: 28px;
-    color: #000000;
+    font-weight: bold;
+    color: #363534;
     margin-bottom: 32px;
+}
+#knowFVext {
+    margin-top: 62px;
 }
 .bottomline {
     font-size: 25px;
@@ -616,6 +665,7 @@ table {
 }
 .bottomlinecontainer {
     margin-top: 38px;
+    margin-bottom: 100px;
 }
 .fa {
     font-size: 50px;
@@ -626,6 +676,8 @@ table {
     text-align: center;
     text-decoration: none;
     position: relative;
+    margin: 15px;
+    text-decoration: none !important;
   }
   .social {
     display: block;
@@ -645,21 +697,36 @@ table {
       max-width: 100%;
       max-height: 100%;
       margin-top: 32px;
-      margin-bottom: 32px;
+      margin-bottom: 100px;
   }
   .additional-aut {
       margin-top: 28px;
   }
   .question {
-      font-family: 'Roboto', Arial, Helvetica, sans-serif;
-      font-size: 21px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 28px;
+      color: #363534;
       font-weight: bold;
+      margin-bottom: 80px;
   }
   .try {
       font-family: 'adihaus_regular', Arial, Helvetica, sans-serif;
       font-size: 22px;
       font-weight: bold;
       color: #000000;
+      margin-top: 100px;
+      margin-bottom: 100px;
+  }
+  .part {
+      background-color: #dedede;
+      border: 1px solid #dedede;
+      text-align: center;
+      width: 100%;
+  }
+  .partdiv {
+    text-align: center;
+    width: 320px;
+    margin-bottom: 100px;
   }
 @media only screen and (max-width: 767px) {
     /* For mobile phones: */
@@ -677,8 +744,8 @@ table {
         left: 0;
         width: 100%;
         height: 100%;
-        margin-top: 26px;
-        margin-bottom: 26px;
+        margin-top: 100px;
+        margin-bottom: 125px;
     }
     .navbar {
         box-shadow: none;
