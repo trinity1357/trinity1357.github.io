@@ -61,18 +61,21 @@
   </div>
 </nav>
 <nav class="mobile-nav">
-  <a href="https://trinity1357.github.io/Home">Home</a>
-    <a href="https://trinity1357.github.io/About">About</a>
+  <a href="https://trinity1357.github.io/Home">Home</a><br><br>
+    <a href="https://trinity1357.github.io/About">About</a><br><br>
     <a href="https://trinity1357.github.io/Contact">Contact</a>
     <div class="social container">
-    <a class="fa fa-instagram"></a>
+      <br><br><br><br>
+    <a class="fa fa-instagram"></a> <br><br>
     <a href="https://trinity1357.github.io/Home" class="fa fa-github"></a>
     </div>
 </nav>
 </header>
 <!-- header -->
+<div class="container">
+  <h1 class="heading" aria-label="Future Value Calculator" aria-describedby="Future Value Calculator">Future Value Calculator</h1>
+</div>
    <div class="container">
-    <h1 class="heading" aria-label="Future Value Calculator" aria-describedby="Future Value Calculator">Future Value Calculator</h1>
 <!-- calc -->
 <div class="col-md-6" id="col-md-6-id">
   <div class="form">
@@ -92,13 +95,14 @@
     <label for="pmt" class="pmtlabel">PMT</label>
   </div>
   <div class="select">
-    <input type="radio" id="begin" name="fav_language" value="HTML">
+    <input type="radio" id="begin" name="fav_language" value="beginval">
   <label for="begin" id="start">beginning</label>
-  <input type="radio" id="endinput" name="fav_language" value="CSS">
+<br><br><input type="radio" id="endinput" name="fav_language" value="endval">
   <label for="endinput" id="end">end</label>
 <a class="disclaimerbutton"><img src="disclaimer.svg" alt="disclaimer">
   <span class="tooltiptext">default type is 0 (end).</span>
-</a>
+</a> 
+<br><br><br>
   </div>
     <div class="calculate-container" id="calcres">
       <div class="calculate">
@@ -147,10 +151,13 @@
         </table>
       </div>
       <div class="col-md-6" id="formula_container_resp">
-        <img src="svg_arrow.svg" alt="Future Value Formula Indication" class="indication"><span class="FV_formula">
+        <img src="svg_arrow.svg" alt="Future Value Formula Indication" class="indication">
+        <span class="FV_formula">
           Future Value Formula
-        </span><br>
-        <h3 class="formula">FV=PV(1+i)<sup>n</sup></h3><br>
+        </span><br><br>
+        <br>
+        <h3 class="formula">FV=PV(1+i)<sup>n</sup></h3><br><br>
+        <br>
         <p>Above formula will estimate future value of an asset when the present value(PV), rate of interest(i) and number of periods(n)
           are provided.Future value helps estimate the worth of an asset in later point in time.
         </p>
@@ -165,8 +172,11 @@
 <div class="col-md-6" id="formula_container_for_991">
   <img src="svg_arrow.svg" alt="Future Value Formula Indication" class="indication"><span class="FV_formula">
     Future Value Formula
-  </span><br>
+  </span><br><br>
+  <br>
   <h3 class="formula">FV=PV(1+i)<sup>n</sup></h3><br>
+  <br>
+        <br>
   <p class="p_text_for_991">Above formula will estimate future value of an asset when the present value(PV), rate of interest(i) and number of periods(n)
     are provided.
   </p>
@@ -178,17 +188,56 @@
    </div>
   <!-- info -->
   </div>
+  <section class="how-to-calculate-future-value">
+    <div class="container">
+      <h2 id="howtocalculatefv">How to calculate future value ?</h2>
+      <h3 id="knowFV">Knowing your assets future worth.</h3>
+      <p id="knowFVext">You can estimate the future value of an asset by using the future value formula
+        that is FV = PV * (1 + i)<sup>n</sup>
+        <br>
+        Where,<br>
+        'PV' denotes the present value of an asset.<br>
+        'i' denotes the interest rate that applies to a particular asset.<br>
+        'n' represents the number of periods the amount is applicable to that specific asset.
+        If,<br>
+        PV = 100;<br>
+        i = 2;<br>
+        n = 2 years;<br>
+        Then,<br>plug in the figures above in the provided formula and solve for the equation. <br>
+        you will get future value of your asset.
+      </p>
+      </div>
+      <div class="partdiv container">
+        <hr class="part">
+      </div>
+      <div class="container">
+      <h4 id="futurevalofmoneycalc">Future Value of money calculator</h4>
+      <h5 id="determine">Determine monetary worth.</h5>
+      <p>Let's say your asset costs $20 currently and you want to know how much would it cost
+        at a certain point in time in future or let's say for instance
+        two years later.you use the formula provided for estimating future value that is FV = PV * (1 + i)<sup>n</sup>.
+        and you are left with the required number that indicates the future value of your asset.
+        Future Value of Money calculator will determine the assets worth in the future when the current value of that specific
+        asset is provided along with rate of return and time period associated with it.
+      </p>
+    </div>
+  </section>
+  <div class="partdiv container">
+    <hr class="part">
+  </div>
   <section>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <span class="formula_with_pmt">
-            when pmt comes into play
+            Future Value with PMT
           </span><br>
-          <h3 class="fv_along_pmt_pv">FV = PMT [(1+(i/100))<sup>n</sup> -1/(i/100)] + PV(1+(i/100))<sup>n</sup></h3><br>
-          <p>
+          <p id="future-val-with-pmt">Future Value formula with PMT</p>
+          <h5 class="fv_along_pmt_pv">FV = PMT [(1+(i/100))<sup>n</sup> -1/(i/100)] + PV(1+(i/100))<sup>n</sup></h5><br>
+          <p id="fvwithpmtdescription">
             Future Value along with Periodic Monthly Payments (PMT) and Present Value (PV) will help you find
-            out the future worth of an asset when amount is paid on a periodic basis and the current
+            out the future worth of an asset when amount is paid on a periodic basis or when the amount is paid
+            depending on compounding periods and when the current
             value (PV) of that particular asset is known.
           </p>
         </div>
@@ -201,6 +250,9 @@
       </div>
     </div>
   </section>
+  <div class="partdiv container">
+    <hr class="part">
+  </div>
   <section class="Time Value of Money image">
     <div class="container" id="tvm">
       <img src="tvm_svg.svg" alt="Time Value of Money" class="tvm_svg">
@@ -210,10 +262,10 @@
   <section aria-roledescription="Time Value of Money">
     <div class="tvm_description container">
       
-      <p class="query-tvm">Would you rather eat fresh food today or let it rot for some time and then consider eating ?
-      </p><br>
+      <h5 id="query-tvm" > Would you rather eat fresh food today or let it rot for some time and then consider eating ?
+      </h5><br>
       <p>
-        Time Value of Money not exactly but kind of works in a similar way say for instance,
+        Time Value of Money works in a similar way say for instance,
         you have fresh apple you or any sane person would probably munch on it before it gets putrid and lose all it's nutritional
         value and novelty.Here
         the apple you have is the 'ASSET' and the freshness or newness of apple is the 'VALUE'.So if you eat your fruit
@@ -223,6 +275,9 @@
         could be $15 in one or five years.</p>
     </div>
   </section>
+  <div class="partdiv container">
+    <hr class="part">
+  </div>
   <section class="for_desktop">
     <div class="container">
       <div class="row">
@@ -233,7 +288,7 @@
         </div>
         <div class="col-md-8">
             <div class="cred-tvm container">
-              <h5 class="credit-card-tvm-heading">tvm impact on credit cards</h5>
+              <h6 class="credit-card-tvm-heading">tvm impact on credit cards</h6>
               <p class="credit-card-tvm-info">when a person buys an item from a store it could be an online store or local electronics store,
                 the transaction that is made makes a huge impact on the credit score that inturn could potentially ruin that individual's credit history depending
                 on the amount of transaction.
@@ -249,9 +304,9 @@
   </section>
   <section aria-describedby="future value time value of money" class="for_tablets">
     <div class="container">
-      <h5 class="credit-card-tvm-heading">
+      <h6 class="credit-card-tvm-heading">
         tvm impact on credit cards
-      </h5>
+      </h6>
       <div class="row">
         <div class="col-sm-6">
           <img src="credit-card.svg" alt="credit-card time value of money" class="credit-card">
@@ -271,9 +326,9 @@
   </section>
   <section aria-describedby="future value time value of money" class="for_mobile">
     <div class="container">
-      <h5 class="credit-card-tvm-heading">
+      <h6 class="credit-card-tvm-heading">
         tvm impact on credit cards
-      </h5>
+      </h6>
       <img src="credit-card.svg" alt="credit-card time value of money" class="credit-card">
       <p class="credit-card-tvm-info">when a person buys an item from a store it could be an online store or local electronics store,
         the transaction that is made makes a huge impact on the credit score that inturn could potentially ruin that individual's credit history depending
@@ -285,6 +340,10 @@
       </p>
     </div>
   </section>
+  <br><br><br>
+  <div class="partdiv container">
+    <hr class="part">
+  </div>
   <!-- Auto-heading -->
   <section class="automobile-heading">
     <div class="container">
@@ -347,6 +406,10 @@
       </p>
     </div>
   </section>
+  <br><br><br><br>
+  <div class="partdiv container">
+    <hr class="part">
+  </div>
   <!-- not-in-this-div -->
   <!-- try -->
   <div class="trycontainer container">
@@ -371,7 +434,7 @@
         <li class="linklist"><a class="footerlinks" href="https://trinity1357.github.io/cookies/">Cookies</a></li>
       </ul>
     <div class="copyrightdiv">
-      © 2021 Copyright:
+      © 2021:
       <a href="https://trinity1357.github.io" class="trin">Trinity Finance</a>
     </div>
   </div>
