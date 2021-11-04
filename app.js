@@ -34,7 +34,7 @@ function future_value() {
     document.getElementById('futureValue').innerHTML = futureValueCompileWithPMT;
     document.getElementById('ceil').innerHTML = Math.ceil(futureValueCompileWithPMT);
     document.getElementById('floor').innerHTML = Math.floor(futureValueCompileWithPMT);
-    document.getElementById('pv').innerHTML = presentValueWithPMT;
+    document.getElementById('pv').innerHTML = Math.round(presentValueWithPMT);
     document.getElementById('int').innerHTML = interestchart.value;
     document.getElementById('periods').innerHTML = timechart.value;
     document.getElementById('pmtop').innerHTML = pmtchart.value;
