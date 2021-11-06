@@ -708,6 +708,11 @@ table {
     width: 320px;
     margin-bottom: 100px;
   }
+#watchexampleamount, #watchtime, #watchexample, #watchValue {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
 @media only screen and (max-width: 767px) {
     /* For mobile phones: */
     .form-group{
